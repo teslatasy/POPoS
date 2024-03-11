@@ -5,16 +5,17 @@ The pytorch implementation for paper " POPoS: Detecting facial landmarks with Pa
 [[Project]](https://teslatasy.github.io/PoPoS/) [[Paper]]() 
 
 ## Requirements
--mmcv-full==1.6.2
--mmdet==2.28.2
--mmpose==0.29.0
--openmim==0.3.9
--torch==1.12.0
--torch-summary==1.4.5
--torchaudio==0.12.0
--torchstat==0.0.7
--torchvision==0.13.0
--tornado==6.3.3
+- python==3.8.17
+- mmcv-full==1.6.2
+- mmdet==2.28.2
+- mmpose==0.29.0
+- openmim==0.3.9
+- torch==1.12.0
+- torch-summary==1.4.5
+- torchaudio==0.12.0
+- torchstat==0.0.7
+- torchvision==0.13.0
+- tornado==6.3.3
 
 For more details, please refer to the `requirements/piplist.txt`. We conduct the experiments with 4 NVIDIA 3090 GPUs.
 
@@ -82,10 +83,5 @@ Our work is primarily based on [mmpose](https://github.com/zhiqic/KeyPosS/). We 
 Please cite the following paper if you use this repository in your research.
 
 ```
-@inproceedings{shen2023difftalk,
-   author={Shen, Shuai and Zhao, Wenliang and Meng, Zibin and Li, Wanhua and Zhu, Zheng and Zhou, Jie and Lu, Jiwen},
-   title={DiffTalk: Crafting Diffusion Models for Generalized Audio-Driven Portraits Animation},
-   booktitle={CVPR},
-   year={2023}
-}
+
 ```
