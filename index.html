@@ -1947,7 +1947,7 @@
 <body class='typora-export'>
     <div class='typora-export-content'>
         <div id='write' class=''>
-            <h1 id='dyronet-a-low-rank-adapter-enhanced-dynamic-routing-network-for-streaming-perception'>
+            <h1 id='POPoS:Detecting facial landmarks with Parallel Optimal Position Search'>
                 <p align="center"><font size="16">POPoS: </font></p><p align="center">Detecting facial landmarks with Parallel Optimal Position Search</p></h1>
             <div class="is-size-5 publication-authors">
             <p align="center"><span class="author" data-institution="1">Chong-yang Xiang</span>, <span class="author" data-institution="3">Jun-Yan He</span>, <span class="author" data-institution="2">Zhi-Qi Cheng</span><sup>&Dagger;</sup>, <span class="author" data-institution="3">Chenyang Li</span>,
@@ -1989,7 +1989,7 @@
               </div>
             </div>
             <p>
-<span>This paper presents a new approach called <strong>P</strong>arallel <strong>O</strong>ptimal <strong>Po</strong>sition <strong>S</strong>earch <i>P</i>OPoS<i>)</i> for the accurate detection of facial landmarks.~Compared to traditional methods, POPoS is highly efficient in low-resolution scenarios and fast processing while maintaining a high level of accuracy.~The core of the POPoS method is the positioning step that uses multi-point positioning schemas and the Gauss-Newton iteration process to mitigate local errors and ensure precise localization of facial landmarks.~Moreover, POPoS uses a specialized local anchor loss function to improve the precision of distance maps at anchor landmarks.~This approach significantly contributes to global and local optimization objectives, resulting in superior landmark detection and positioning.~POPoS is a valuable asset in situations with limited computational resources, offering a single-step parallel computation alternative that enables efficient processing even under resource-constrained conditions.~This capability makes POPoS a vital tool for various applications.~The effectiveness of POPoS has been thoroughly evaluated across five different datasets, consistently demonstrating its superiority over existing methods.~Notably, POPoS excels in processing low-resolution images with minimal computational overhead, making it an essential tool in facial landmark detection.</span></p>
+<span>This paper presents a new approach called <strong>P</strong>arallel <strong>O</strong>ptimal <strong>Po</strong>sition <strong>S</strong>earch <i>P</i>OPoS<i>)</i> for the accurate detection of facial landmarks. Compared to traditional methods, POPoS is highly efficient in low-resolution scenarios and fast processing while maintaining a high level of accuracy.~The core of the POPoS method is the positioning step that uses Pseudo-range multilateration and the Gauss-Newton iteration process to mitigate local errors and ensure precise localization of facial landmarks. Moreover, POPoS uses a specialized local anchor loss function to improve the precision of distance maps at anchor landmarks.~This approach significantly contributes to global and local optimization objectives, resulting in superior landmark detection and positioning. POPoS is a valuable asset in situations with limited computational resources, offering a single-step parallel computation alternative that enables efficient processing even under resource-constrained conditions. This capability makes POPoS a vital tool for various applications. The effectiveness of POPoS has been thoroughly evaluated across five different datasets, consistently demonstrating its superiority over existing methods. Notably, POPoS excels in processing low-resolution images with minimal computational overhead, making it an essential tool in facial landmark detection.</span></p>
             <p align='center'>
                 <img src='imgs/framework.jpg' width='1200'/>
             </p>
@@ -2150,7 +2150,7 @@
                     <td>7.56</td>
                     <td>11.14</td>
                 </tr>
-            </table></figure><p>&nbsp;</p></div></div>
+            </table></figure>
             <p><span>Qualitative comparison of various distance decoding methods at a heatmap resolution of 4x4, including one-hot, two-hot, distribution-aware, KeyPosS, and POPoS methods:</span></p>
             <p align='center'>
                 <img src='imgs/vis-heatmap-4.jpg' width='800'/>
@@ -2159,6 +2159,7 @@
             <p align='center'>
                 <img src='imgs/vis-heatmap-8-64.jpg' width='1200'/>
             </p>
+            <p>&nbsp;</p></div></div>
     </div>
     </div>
 </body>
