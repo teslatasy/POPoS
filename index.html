@@ -1988,13 +1988,15 @@
                 </span>
               </div>
             </div>
+            <h2>Abstract & Method</h2>
             <p>
+           
 <span>This paper presents a new approach called <strong>P</strong>arallel <strong>O</strong>ptimal <strong>Po</strong>sition <strong>S</strong>earch <i>(POPoS)</i> for the accurate detection of facial landmarks. Compared to traditional methods, POPoS is highly efficient in low-resolution scenarios and fast processing while maintaining a high level of accuracy.~The core of the POPoS method is the positioning step that uses Pseudo-range multilateration and the Gauss-Newton iteration process to mitigate local errors and ensure precise localization of facial landmarks. Moreover, POPoS uses a specialized local anchor loss function to improve the precision of distance maps at anchor landmarks.~This approach significantly contributes to global and local optimization objectives, resulting in superior landmark detection and positioning. POPoS is a valuable asset in situations with limited computational resources, offering a single-step parallel computation alternative that enables efficient processing even under resource-constrained conditions. This capability makes POPoS a vital tool for various applications. The effectiveness of POPoS has been thoroughly evaluated across five different datasets, consistently demonstrating its superiority over existing methods. Notably, POPoS excels in processing low-resolution images with minimal computational overhead, making it an essential tool in facial landmark detection.</span></p>
             <p align='center'>
                 <img src='imgs/framework.jpg' width='1200'/>
             </p>
                 <!-- <p><span>The videos presented here demonstrate the advantages of our proposed <i>DyRoNet</i>. From the videos, it is evident that <i>DyRoNet</i> can achieve performance equal to or even surpassing all sub-models in the Model Bank (in these examples, <i>DyRoNet</i> is consisting of <i>StreamYOLO s</i> and <i>StreamYOLO m</i>) in complex and dynamic autonomous driving scenarios.</span></p> -->
-
+            <h2>Results</h2>	
             <p><span>The following table illustrates the specific performance of POPoS under different heatmap resolutions:</span></p>
             <div id='write'  class=''><figure class='table-figure'><table>
                 <tr>
@@ -2151,6 +2153,7 @@
                     <td>11.14</td>
                 </tr>
             </table></figure>
+            <h2>Result Visualization</h2>	
             <p><span>Qualitative comparison of various distance decoding methods at a heatmap resolution of 4x4, including one-hot, two-hot, distribution-aware, KeyPosS, and POPoS methods:</span></p>
             <p align='center'>
                 <img src='imgs/vis-heatmap-4.jpg' width='800'/>
@@ -2159,6 +2162,8 @@
             <p align='center'>
                 <img src='imgs/vis-heatmap-8-64.jpg' width='1200'/>
             </p>
+            <h2>Citation</h2>
+            
             <p>&nbsp;</p></div></div>
     </div>
     </div>
