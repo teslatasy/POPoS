@@ -1939,7 +1939,34 @@
             background-color: #f5f8fa;
             background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
         }
+
     </style>
+    <style>
+        table>caption {
+            margin: 0 0 5px 0;
+        }
+
+        table>thead>tr>th {
+            border-top: 2px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        table>tbody>tr:last-child>td {
+            border-bottom: 2px solid #000;
+        }
+
+        table>thead>tr>th {
+            padding: 6px 20px;
+            text-align: center;
+        }
+
+        table>tbody>tr>td {
+            padding: 6px 20px;
+            text-align: center;
+        }
+    </style>
+
+    
     <link rel="stylesheet" href="./css/index.css">
     <title>POPoS</title>
 </head>
@@ -1998,8 +2025,7 @@
                 <!-- <p><span>The videos presented here demonstrate the advantages of our proposed <i>DyRoNet</i>. From the videos, it is evident that <i>DyRoNet</i> can achieve performance equal to or even surpassing all sub-models in the Model Bank (in these examples, <i>DyRoNet</i> is consisting of <i>StreamYOLO s</i> and <i>StreamYOLO m</i>) in complex and dynamic autonomous driving scenarios.</span></p> -->
             <h2>Results</h2>	
             <p><span>The following table illustrates the specific performance of POPoS under different heatmap resolutions:</span></p>
-            <div id='write'  class=''><figure class='table-figure'><table>
-            
+            <table cellpadding="0" cellspacing="0"><thead>
                 <tr>
                     
                     <tr align="center">  
@@ -2007,24 +2033,13 @@
                         <td colspan="5">300W </td>  
                         <td colspan="5">AFLW </td>  
                         <td colspan="5">COCOWholcbody</td>  
-                        <td colspan="5">COFW </td>  
-                        <td colspan="5">WFLW </td>  
                       </tr>
 
                 </tr>
-
+            </thead>
+            <tbody>
                 <tr>
                     <th>Resolution</th>
-                    <td>64<sup>2</sup></td>
-                    <td>32<sup>2</sup></td>
-                    <td>16<sup>2</sup></td>
-                    <td>8<sup>2</sup></td>
-                    <td>4<sup>2</sup></td>
-                    <td>64<sup>2</sup></td>
-                    <td>32<sup>2</sup></td>
-                    <td>16<sup>2</sup></td>
-                    <td>8<sup>2</sup></td>
-                    <td>4<sup>2</sup></td>
                     <td>64<sup>2</sup></td>
                     <td>32<sup>2</sup></td>
                     <td>16<sup>2</sup></td>
@@ -2058,16 +2073,6 @@
                     <td>10.51</td>
                     <td>17.98</td>
                     <td>37.72</td>
-                    <td>3.74</td>
-                    <td>4.6</td>
-                    <td>10.65</td>
-                    <td>27.73</td>
-                    <td>57.84</td>
-                    <td>4.29</td>
-                    <td>5.24</td>
-                    <td>7.59</td>
-                    <td>14.74</td>
-                    <td>28.8</td>
                 </tr>
                 <tr>
                     <th>Two-hot</th>
@@ -2086,16 +2091,6 @@
                     <td>8.11</td>
                     <td>14.28</td>
                     <td>34.54</td>
-                    <td>3.53</td>
-                    <td>4.00</td>
-                    <td>9.42</td>
-                    <td>26.53</td>
-                    <td>57.04</td>
-                    <td>4.07</td>
-                    <td>4.55</td>
-                    <td>5.83</td>
-                    <td>12.3</td>
-                    <td>27.5</td>
                 </tr>
                 <tr>
                     <th>DarkPoS</th>
@@ -2114,16 +2109,6 @@
                     <td>6.58</td>
                     <td>15.71</td>
                     <td>40.12</td>
-                    <td>3.42</td>
-                    <td>3.8</td>
-                    <td>4.92</td>
-                    <td>12.75</td>
-                    <td>37.5</td>
-                    <td>3.96</td>
-                    <td>4.25</td>
-                    <td>5.38</td>
-                    <td>11.83</td>
-                    <td>26.05</td>
                 </tr>
                 <tr>
                     <th>POPoS</th>
@@ -2142,6 +2127,82 @@
                     <td>6.33</td>
                     <td>9.26</td>
                     <td>16.02</td>
+                </tr></tbody>
+            </table><p>&nbsp;</p>
+
+
+
+
+            <table cellpadding="0" cellspacing="0"><thead>
+                <tr>
+                    
+                    <tr align="center">  
+                        <th>Dataset</th>
+
+                        <td colspan="5">COFW </td>  
+                        <td colspan="5">WFLW </td>  
+                      </tr>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Resolution</th>
+                    <td>64<sup>2</sup></td>
+                    <td>32<sup>2</sup></td>
+                    <td>16<sup>2</sup></td>
+                    <td>8<sup>2</sup></td>
+                    <td>4<sup>2</sup></td>
+                    <td>64<sup>2</sup></td>
+                    <td>32<sup>2</sup></td>
+                    <td>16<sup>2</sup></td>
+                    <td>8<sup>2</sup></td>
+                    <td>4<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <th>One-hot</th>
+
+                    <td>3.74</td>
+                    <td>4.6</td>
+                    <td>10.65</td>
+                    <td>27.73</td>
+                    <td>57.84</td>
+                    <td>4.29</td>
+                    <td>5.24</td>
+                    <td>7.59</td>
+                    <td>14.74</td>
+                    <td>28.8</td>
+                </tr>
+                <tr>
+                    <th>Two-hot</th>
+                    <td>3.53</td>
+                    <td>4.00</td>
+                    <td>9.42</td>
+                    <td>26.53</td>
+                    <td>57.04</td>
+                    <td>4.07</td>
+                    <td>4.55</td>
+                    <td>5.83</td>
+                    <td>12.3</td>
+                    <td>27.5</td>
+                </tr>
+                <tr>
+                    <th>DarkPoS</th>
+                    
+                    <td>3.42</td>
+                    <td>3.8</td>
+                    <td>4.92</td>
+                    <td>12.75</td>
+                    <td>37.5</td>
+                    <td>3.96</td>
+                    <td>4.25</td>
+                    <td>5.38</td>
+                    <td>11.83</td>
+                    <td>26.05</td>
+                </tr>
+                <tr>
+                    <th>POPoS</th>
+                    
                     <td>3.44</td>
                     <td>3.69</td>
                     <td>4.43</td>
@@ -2152,8 +2213,9 @@
                     <td>4.92</td>
                     <td>7.56</td>
                     <td>11.14</td>
-                </tr>
-            </table></figure>
+                </tr></tbody>
+            </table><p>&nbsp;</p>
+
             <h2>Result Visualization</h2>	
             <p><span>Qualitative comparison of various distance decoding methods at a heatmap resolution of 4x4, including one-hot, two-hot, distribution-aware, KeyPosS, and POPoS methods:</span></p>
             <p align='center'>
@@ -2165,7 +2227,7 @@
             </p>
             <h2>Citation</h2>
 
-            <p>&nbsp;</p></div></div>
+            </div></div>
     </div>
     </div>
 </body>

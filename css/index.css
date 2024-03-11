@@ -33,12 +33,11 @@ body {
   text-align: center; /* 表头居中 */
 }
 
-/* 设置特定列的宽度 */
+/* 设置特定列的宽度 
 .comparison-table th:nth-child(1),
 .comparison-table td:nth-child(1) {
   width: 30%;
 }
-
 .comparison-table th:nth-child(2),
 .comparison-table th:nth-child(3),
 .comparison-table th:nth-child(4),
@@ -90,7 +89,7 @@ body {
 .comparison-table td:nth-child(25),
 .comparison-table td:nth-child(26){
   width: 15%;
-}
+} 
 
 /* 标题和表格说明样式 */
 .section .title {
