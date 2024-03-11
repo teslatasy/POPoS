@@ -1,0 +1,1 @@
+python tools/analysis/get_flops.py configs/face/2d_kpt_sview_rgb_img/topdown_heatmap_32/300w/hrnetv2_w18_300w_256x256.py 
