@@ -1948,10 +1948,10 @@
     <div class='typora-export-content'>
         <div id='write' class=''>
             <h1 id='dyronet-a-low-rank-adapter-enhanced-dynamic-routing-network-for-streaming-perception'>
-                <p align="center"><font size="16">DyRoNet:</font></p><p align="center">A Low-Rank Adapter Enhanced Dynamic Routing Network for Streaming Perception</p></h1>
+                <p align="center"><font size="16">POPoS: </font></p><p align="center">Detecting facial landmarks with Parallel Optimal Position Search</p></h1>
             <div class="is-size-5 publication-authors">
-            <p align="center"><span class="author" data-institution="1">Xiang Huang</span>, <span class="author" data-institution="2">Zhi-Qi Cheng</span><sup>&Dagger;</sup>, <span class="author" data-institution="3">Jun-Yan He</span>, <span class="author" data-institution="3">Chenyang Li</span>,
-            <span class="author" data-institution="3,4">Wangmeng Xiang</span>, <span class="author" data-institution="3">Baigui Sun</span>, <span class="author" data-institution="1">Xiao Wu</span></p>
+            <p align="center"><span class="author" data-institution="1">Chong-yang Xiang</span>, <span class="author" data-institution="3">Jun-Yan He</span>, <span class="author" data-institution="2">Zhi-Qi Cheng</span><sup>&Dagger;</sup>, <span class="author" data-institution="3">Chenyang Li</span>,
+            <span class="author" data-institution="2">Jingdong Sun</span>, <span class="author" data-institution="3,4">Wangmeng Xiang</span>, <span class="author" data-institution="1">Xiao Wu</span></p>
             </div>
             <div class="is-size-5 publication-authors">
               <p align="center"><sup>1</sup>Southwest Jiaotong University, <sup>2</sup>Language Technologies Institute (LTI), Carnegie Mellon University,
@@ -1978,7 +1978,7 @@
                   </a>
                 </span>&nbsp;
                 <span class="link-block">
-                  <a href="https://github.com/tastevision/DyRoNet"
+                  <a href="https://github.com/teslatasy/PoPoS"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -1989,24 +1989,12 @@
               </div>
             </div>
             <p>
-<span>Autonomous driving systems demand real-time, accurate perception to navigate complex environments. Addressing this, we introduce the <strong>Dy</strong>namic <strong>Ro</strong>uter <strong>Net</strong>work (<i>DyRoNet</i>), a framework that innovates with low-rank dynamic routing for enhanced streaming perception. By integrating specialized pre-trained branch networks, fine-tuned for various environmental conditions, <i>DyRoNet</i> achieves a balance between latency and precision. Its core feature, the speed router module, intelligently directs input data to the best-suited branch network, optimizing performance. The extensive evaluations reveal that <i>DyRoNet</i> adapts effectively to multiple branch selection strategies, setting a new benchmark in performance across a range of scenarios. <i>DyRoNet</i> not only establishes a new benchmark for streaming perception but also provides valuable engineering insights for future work.</span></p>
+<span>This paper presents a new approach called <strong>P</strong>arallel <strong>O</strong>ptimal <strong>Po</strong>sition <strong>S</strong>earch <i>P</i>OPoS<i>)</i> for the accurate detection of facial landmarks.~Compared to traditional methods, POPoS is highly efficient in low-resolution scenarios and fast processing while maintaining a high level of accuracy.~The core of the POPoS method is the positioning step that uses multi-point positioning schemas and the Gauss-Newton iteration process to mitigate local errors and ensure precise localization of facial landmarks.~Moreover, POPoS uses a specialized local anchor loss function to improve the precision of distance maps at anchor landmarks.~This approach significantly contributes to global and local optimization objectives, resulting in superior landmark detection and positioning.~POPoS is a valuable asset in situations with limited computational resources, offering a single-step parallel computation alternative that enables efficient processing even under resource-constrained conditions.~This capability makes POPoS a vital tool for various applications.~The effectiveness of POPoS has been thoroughly evaluated across five different datasets, consistently demonstrating its superiority over existing methods.~Notably, POPoS excels in processing low-resolution images with minimal computational overhead, making it an essential tool in facial landmark detection.</span></p>
             <p align='center'>
-                <img src='imgs/framework.jpg' width='900'/>
+                <img src='imgs/framework.jpg' width='1200'/>
             </p>
                 <p><span>The videos presented here demonstrate the advantages of our proposed <i>DyRoNet</i>. From the videos, it is evident that <i>DyRoNet</i> can achieve performance equal to or even surpassing all sub-models in the Model Bank (in these examples, <i>DyRoNet</i> is consisting of <i>StreamYOLO s</i> and <i>StreamYOLO m</i>) in complex and dynamic autonomous driving scenarios.</span></p>
-            <video controls>
-              <source src="./videos/5ab2697b-6e3e-3454-a36a-aba2c6f27818.mp4" type="video/mp4">
-            </video>
-            <video controls>
-              <source src="./videos/033669d3-3d6b-3d3d-bd93-7985d86653ea.mp4" type="video/mp4">
-            </video>
-            <video controls>
-              <source src="./videos/f9fa3960-537f-3151-a1a3-37a9c0d6d7f7.mp4" type="video/mp4">
-            </video>
-            <p><span>In static scenarios, <i>DyRoNet</i>'s performance is equivalent to that of any individual sub-model in the Model Bank.</span></p>
-            <video controls>
-              <source src="./videos/33737504-3373-3373-3373-633738571776.mp4" type="video/mp4">
-            </video>
+
             <p><span>The following table illustrates the specific performance of DyRoNet under different Model Bank configurations:</span></p>
             <div id='write'  class=''><figure class='table-figure'><table><thead><tr><th><span>Model Bank</span></th><th><span>sAP (0.50:0.95)</span></th><th><span>sAP (0.50)</span></th><th><span>sAP (0.75)</span></th><th><span>sAP s</span></th><th><span>sAP m</span></th><th><span>sAP l</span></th></tr></thead><tbody><tr><td><span>StreamYOLO S + M</span></td><td><span>30.5</span></td><td><span>51.0</span></td><td><span>30.7</span></td><td><span>11.4</span></td><td><span>31.9</span></td><td><span>53.1</span></td></tr><tr><td><span>StreamYOLO S + L</span></td><td><span>36.6</span></td><td><span>58.0</span></td><td><span>37.0</span></td><td><span>14.7</span></td><td><span>37.4</span></td><td><span>63.4</span></td></tr><tr><td><span>StreamYOLO M + L</span></td><td><span>35.0</span></td><td><span>55.7</span></td><td><span>35.5</span></td><td><span>13.7</span></td><td><span>36.2</span></td><td><span>61.1</span></td></tr><tr><td><span>LongShortNet S + M</span></td><td><span>30.0</span></td><td><span>50.5</span></td><td><span>29.7</span></td><td><span>11.0</span></td><td><span>30.5</span></td><td><span>55.9</span></td></tr><tr><td><span>LongShortNet S + L</span></td><td><span>36.9</span></td><td><span>58.2</span></td><td><span>37.3</span></td><td><span>14.9</span></td><td><span>37.5</span></td><td><span>63.3</span></td></tr><tr><td><span>LongShortNet M + L</span></td><td><span>36.9</span></td><td><span>58.2</span></td><td><span>37.4</span></td><td><span>14.9</span></td><td><span>37.5</span></td><td><span>63.3</span></td></tr><tr><td><span>DAMO-StreamNet S + M</span></td><td><span>35.2</span></td><td><span>56.7</span></td><td><span>36.0</span></td><td><span>14.2</span></td><td><span>36.5</span></td><td><span>62.5</span></td></tr><tr><td><span>DAMO-StreamNet S + L</span></td><td><span>37.8</span></td><td><span>59.1</span></td><td><span>38.7</span></td><td><span>16.1</span></td><td><span>39.0</span></td><td><span>64.2</span></td></tr><tr><td><span>DAMO-StreamNet M + L</span></td><td><span>37.8</span></td><td><span>58.8</span></td><td><span>38.8</span></td><td><span>16.1</span></td><td><span>39.0</span></td><td><span>64.0</span></td></tr></tbody></table></figure><p>&nbsp;</p></div></div>
     </div>
