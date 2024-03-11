@@ -1,0 +1,553 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* 表格容器样式 */
+.table-container {
+  overflow-x: auto; /* 允许水平滚动 */
+}
+
+/* 表格样式 */
+.comparison-table {
+  width: 100%; /* 表格宽度 */
+  border-collapse: collapse; /* 边框合并 */
+  table-layout: fixed; /* 固定表格布局 */
+}
+
+/* 表头和单元格样式 */
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd; /* 单元格边框 */
+  padding: 8px; /* 单元格内边距 */
+  text-align: left; /* 文本左对齐 */
+}
+
+/* 表头行样式 */
+.comparison-table thead tr {
+  background-color: #f2f2f2; /* 表头背景色 */
+}
+
+/* 表头单元格样式 */
+.comparison-table th {
+  text-align: center; /* 表头居中 */
+}
+
+/* 设置特定列的宽度 */
+.comparison-table th:nth-child(1),
+.comparison-table td:nth-child(1) {
+  width: 30%;
+}
+
+.comparison-table th:nth-child(2),
+.comparison-table th:nth-child(3),
+.comparison-table th:nth-child(4),
+.comparison-table th:nth-child(5),
+.comparison-table td:nth-child(2),
+.comparison-table td:nth-child(3),
+.comparison-table td:nth-child(4),
+.comparison-table td:nth-child(5) {
+  width: 17.5%;
+}
+
+/* 标题和表格说明样式 */
+.section .title {
+  margin-bottom: 20px; /* 标题下边距 */
+}
+
+.comparison-table caption {
+  caption-side: top; /* 确保标题位于表格顶部 */
+  text-align: center; /* 居中标题文本 */
+  font-weight: bold; /* 可选：使标题文本加粗 */
+  font-size: 18px; /* 可选：调整标题字体大小 */
+  margin: 10px 0; /* 在标题上下添加一些外边距 */
+  display: table-caption; /* 保持作为表格标题的默认显示 */
+}
+
+
+caption {
+  caption-side: top; /* 标题位置 */
+  font-size: 18px; /* 标题字体大小 */
+  font-weight: bold; /* 标题字体加粗 */
+  padding: 10px; /* 标题内边距 */
+  text-align: left; /* 标题左对齐 */
+}
+
+
+.authors p {
+  font-family: 'Calibri', sans-serif; /* 设置字体为 Calibri */
+  font-size: 18px; /* 增大字体大小 */
+  color: #000000; /* 设置字体颜色为黑色 */
+  margin: 5px 0; /* 调整段落间距 */
+}
+
+.author {
+  position: relative;
+  display: inline-block; /* 使得伪元素正确定位 */
+  font-size: 20px; /* 增大作者名字的字体大小 */
+}
+
+.author:after {
+  content: attr(data-institution);
+  font-size: smaller;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.author sup {
+  font-size: smaller;
+  color: #333;
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+}
+
+.image-container {
+  text-align: left; /* 设置容器内的所有内容为左对齐 */
+  width: 100%; /* 设置容器宽度为90%，这将限制了图片和文本的最大宽度 */
+  margin: 0 auto; /* 上下保持0，左右自动，以确保容器在页面中居中 */
+}
+
+.centered-image {
+  width: 100%; /* 图片宽度为容器的100%，即实际上为页面宽度的90% */
+  height: auto; /* 高度自动调整以保持图片纵横比 */
+}
+
+.image-description {
+  font-size: 16px; /* 设置描述文字的字体大小 */
+  line-height: 1.5; /* 设置行间距 */
+  margin: 10px 0; /* 在描述文字上下添加一些外边距 */
+  /* 由于容器宽度限制，文本长度不会超过图片长度 */
+}
+
+/* 视频容器样式 */
+.video-container {
+  width: 100%; /* 容器宽度设置为单元格的100% */
+  height: 0; /* 初始高度设置为0 */
+  padding-bottom: 100%; /* 1:1 宽高比，所以使用100% */
+  position: relative; /* 相对定位 */
+}
+
+.video-description {
+  position: absolute;
+  bottom: -100%; /* 将描述放置在视频下方 */
+  left: 0;
+  right: 0;
+  max-width: 100%; /* 限制最大宽度为容器宽度 */
+  background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50%的透明度 */
+  color: #ffffff; /* 白色文字 */
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 16px; /* 增大字体大小 */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  box-sizing: border-box; /* 确保内边距不会使元素超出设定宽度 */
+  overflow: hidden; /* 防止内容溢出 */
+}
+
+.video-container:hover .video-description {
+  opacity: 1;
+}
+
+/* 视频元素样式 */
+.video-container video {
+  position: absolute; /* 绝对定位 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 视频宽度设置为容器的100% */
+  height: 100%; /* 视频高度设置为容器的100% */
+}
+
+/* 调整表格单元格样式 */
+table td {
+  padding: 0; /* 移除内边距 */
+  width: 25%; /* 每个单元格占据表格宽度的四分之一 */
+}
+/* video warper from video ldm  */
+video {
+    display: block;
+    margin: auto;
+}
+div.background_video_header {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.3em;
+  min-height: 350px;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./../assets/backgrounds/background4.webp);
+  background-size: cover;
+  background-position: center;
+}
+div.video_2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.video_container {
+  display: grid;
+}
+div.video_container video {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+div.video_container div.caption {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+div.video_container:hover div.caption {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+div.video_container div.caption div {
+  margin: 0 auto;
+  display: none;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 25px;
+  text-align: center;
+  color: white;
+}
+div.video_container:hover div.caption div {
+  display: block;
+}
+
+video {
+  width: 100%;
+}
+
+div.caption {
+  margin: 0;
+  padding: 25px;
+  background-color: #333333;
+}
+@media (hover: none) {
+  div.mobileonly {
+    display: block;
+  }
+
+  div.nomobile {
+    display: none;
+  }
+
+  div.video_wrapper {
+    width: 100%;
+  }
+}
+
+
+@media (hover: hover) {
+  div.mobileonly {
+    display: none;
+  }
+
+  div.nomobile {
+    display: block;
+  }
+
+  div.video_wrapper {
+    width: 25%;
+  }
+}
+/* end of video ldm video */
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #505050;
+    border: solid 1px #a8a8a8;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.link-block a:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.link-block a:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+.is-smallcaps {
+  font-variant: small-caps;
+}
+
+
+.author-block {
+  display: inline-block;
+}
+
+.author-portrait {
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  font-size: 0;
+  margin: auto;
+}
+.author-portrait img {
+    border-radius: 50%;
+    width: 140px;
+    position: relative;
+}
+
+.author-portrait .depth {
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+/*
+.results-carousel {
+  overflow: hidden;
+}
+*/
+
+.slick-prev {
+
+}
+
+.results-carousel > div {
+  text-align: center;
+}
+
+.results-carousel .results-item {
+  display: inline-block;
+  width: fit-content;
+  overflow: hidden;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+
+.level-set-slices {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+
+.level-set-shapes {
+  font-size: 0;
+  padding-left: 5%;
+}
+.level-set-shapes img {
+  width: 30%;
+}
+.level-set-interpolate {
+  width: 100%;
+}
+.level-set-ox-shapes img {
+  width: 24%;
+}
+
+.content model-viewer {
+ margin-bottom: 1em;
+}
+
+.hyper-space-wrapper {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.hyper-space-axis {
+  padding: 5px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.hyper-space {
+  width: 100%;
+  padding-bottom: calc(100% - 7%);
+  box_sizing: border-box;
+  touch-action: none;
+
+  background-image: url(../figures/hyper_log_prob.png);
+  background-size: contain;
+  border-radius: 10px;
+}
+
+.hyper-space-cursor {
+  width: 7%;
+  padding-bottom: calc(7% - 6px);
+  background: #29e;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.hyper-grid-wrapper{
+  width: 95%;
+  padding-bottom: 95%;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #29e;
+  position: relative;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.hyper-grid-rgb {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  position: absolute;
+}
+
+.hyper-grid-rgb img {
+  position: relative;
+  height: 2000%;
+  width: 2000%;
+  max-width: none !important;
+}
+/* .hero.teaser.video-container .container {
+  max-width: 90%;
+}
+ */
