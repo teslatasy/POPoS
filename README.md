@@ -78,7 +78,7 @@ Get started with the POPoS facial landmark detection system in a few simple step
 
 
 ## Acknowledgment
-Our work is primarily based on [mmpose](https://github.com/zhiqic/KeyPosS/). We express our gratitude to the authors for their invaluable contributions.
+Our work is primarily based on [mmpose](https://github.com/open-mmlab/mmpose). We express our gratitude to the authors for their invaluable contributions.
 ## Citation ##
 Please cite the following paper if you use this repository in your research.
 
