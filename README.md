@@ -2,7 +2,7 @@
 # PoPoS #
 The pytorch implementation for paper " POPoS: Detecting facial landmarks with Parallel Optimal Position Search".
 
-[[Project]](https://teslatasy.github.io/PoPoS/) [[Paper]]() 
+[[Project]]() [[Paper]]() 
 
 ## Requirements
 - python==3.8.17
