@@ -48,7 +48,7 @@ Get started with the POPoS facial landmark detection system in a few simple step
 ### 3. Evaluation:
 
 #### Step 1: Obtain the Models
-- **Download**: Retrieve the pre-trained and trained models for each dataset and heatmap resolution from [Google Drive]()(coming soon).
+- **Download**: Retrieve the pre-trained and trained models for each dataset and heatmap resolution from [Google Drive](https://drive.google.com/file/d/1KaID3pEMz6gBEKFxtF4j28hTtNecU2js/view?usp=sharing).
 
 #### Step 2: Model Setup
 - **Placement**: After downloading, move the "exp" model file to the root directory of your codebase.
