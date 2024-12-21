@@ -1,2 +1,3 @@
 # PoPoS
-Code for POPoS: Detecting facial landmarks with Parallel Optimal Position Search
+Github pages for POPoS: Improving Efficient and Robust Facial Landmark Detection with Parallel
+Optimal Position Search
