@@ -1,6 +1,7 @@
 
 # PoPoS #
-The pytorch implementation for paper " POPoS: Detecting facial landmarks with Parallel Optimal Position Search".
+The pytorch implementation for paper " POPoS: Improving Efficient and Robust Facial Landmark Detection with Parallel
+Optimal Position Search".
 
 [[Project]]() [[Paper]]() 
 
